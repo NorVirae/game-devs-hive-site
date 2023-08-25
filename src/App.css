@@ -42,6 +42,18 @@ ul{
   gap: 2rem;
 }
 
+.schedule-item{
+  display: flex;
+  gap: 1rem;
+}
+.schedule-item-silenced{
+  opacity: .6;
+}
+
+.achieved{
+  text-decoration: line-through;
+}
+
 .seasons-link{
   color: white;
 }
@@ -65,10 +77,25 @@ Count down */
   flex-direction: column;
   gap: 2rem;
 }
+.days-countdown{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 .days-span{
   font-size: 6rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  line-height: 5rem;
+  padding: 0;
 }
 
+.days-span-mini{
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 .demo-desc{
   font-size: 1.5rem;
 }
@@ -77,6 +104,7 @@ Count down */
   font-size: 1.3rem;
   display: flex;
   gap: 1.3rem;
+  opacity: .7;
 }
 
 /* middle folder */
@@ -89,7 +117,12 @@ Count down */
 .folder{
   display: flex;
   flex-direction: column;
-  
+  cursor: pointer;
+  transition: transform .3s ease-in-out;
+}
+
+.folder:active{
+  transform: scale(1.1);
 }
 
 
@@ -119,3 +152,6 @@ Count down */
   align-items: flex-end;
   gap: 2rem
 }
+
+/* Modals */
+
