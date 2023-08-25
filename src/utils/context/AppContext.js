@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export const AppContext = createContext(true);
+export const AppContext = createContext(false);
 
 
 // export const useAppContext = () => {
@@ -12,7 +12,7 @@ export const AppContext = createContext(true);
 //   };
 
 export const AppProvider = ({children}) => {
-    const [isModalOpen, setIsModalOpen] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
       <AppContext.Provider value={{isModalOpen, setIsModalOpen}}>
         {children}

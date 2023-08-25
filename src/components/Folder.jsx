@@ -10,9 +10,9 @@ const images = {
 }
 
 
-export default function Folder({type, name}){
+export default function Folder({type, name, onClick}){
     return (
-        <div className="folder">
+        <div onClick={onClick} className="folder">
             <div className="folder-img-container">
                 <img alt="archive" className="folder-img" src={images[type]}/>
             </div>

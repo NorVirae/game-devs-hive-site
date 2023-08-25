@@ -6,9 +6,12 @@ import Draggable from "react-draggable";
 
 const PopModal = () =>{
     const nodeRef = useRef(null);
+    const {setIsModalOpen} = useContext(AppContext);
 
     return (
-        <div  className="modal-overlay">
+        <div onClick={e=>{
+            setIsModalOpen(false)
+        }} className="modal-overlay">
             <Draggable
                 nodeRef={nodeRef}
                 // axis="x"
@@ -22,7 +25,7 @@ const PopModal = () =>{
                 // onStop={this.handleStop}
                 >
 
-                <section ref={nodeRef} className="modal">
+                <section onClick={e=>e.stopPropagation()} ref={nodeRef} className="modal">
                     <div className="modal-header">
                         <span>recordings</span>
                     </div>

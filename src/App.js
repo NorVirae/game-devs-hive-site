@@ -14,7 +14,8 @@ function App() {
 
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
-  const {isModalOpen, setIsModalOpen} = useContext(AppContext);
+  const {isModalOpen} = useContext(AppContext);
+  const {setIsModalOpen} = useContext(AppContext);
 
   return (
     <div className="App">
@@ -48,7 +49,9 @@ function App() {
       <CountdownTimer targetDate={dateTimeAfterThreeDays}/>
 
       <section className='folders'>
-          <Folder name={"recordings"} type={"record"}/>
+          <Folder onClick={() => {
+            setIsModalOpen(true)
+          }} name={"recordings"} type={"record"}/>
           <Folder name={"archive"} type={"archive"}/>
       </section>
     </div>
