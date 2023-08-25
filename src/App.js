@@ -1,17 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 import Folder from './components/Folder';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useCountdown } from './hooks/UseCountdown';
 import CountdownTimer from './components/timer/CountdownTimer';
+import PopModal from './components/modals/PopModal';
+import { AppContext } from './utils/context/AppContext';
 
 function App() {
   const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
   const NOW_IN_MS = new Date().getTime();
 
   const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+
+  const {isModalOpen, setIsModalOpen} = useContext(AppContext);
+
   return (
     <div className="App">
+      {isModalOpen && <PopModal/>}
       <section className='schedule-container'>
         <h3>schedule</h3>
 

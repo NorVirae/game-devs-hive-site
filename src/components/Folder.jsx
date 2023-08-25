@@ -4,6 +4,7 @@ const images = {
     week: "/images/week.webp",
     update: "/images/update.webp",
     record: "/images/records.webp",
+    file: "/images/file.webp"
 
 
 }

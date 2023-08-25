@@ -154,4 +154,69 @@ Count down */
 }
 
 /* Modals */
+.modal-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.modal{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 25rem;
+  height: 25rem;
+  background-color: black;
+  border: .1rem solid white;
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  color: white;
 
+}
+.modal-item{
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.modal-body{
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 2rem;
+}
+.modal-item-title{
+  font-size: 1.5rem;
+}
+
+.modal-item-body{
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem .5rem;
+  background-color: white;
+  color: white;
+  background-image: url(/public/images/bar.png);
+}
+
+.modal-header span{
+  font-size: 2rem;
+  background-color: black;
+}
+
+.modal-header:hover{
+  cursor:grab;
+}
+
+.modal-header:active{
+  cursor:grabbing;
+}
