@@ -3,7 +3,7 @@ const images = {
     archive: "/images/archive.webp",
     week: "/images/week.webp",
     update: "/images/update.webp",
-    records: "/images/records.webp",
+    record: "/images/records.webp",
 
 
 }
@@ -15,7 +15,7 @@ export default function Folder({type, name}){
             <div className="folder-img-container">
                 <img alt="archive" className="folder-img" src={images[type]}/>
             </div>
-            <h3 className="title-name">{name}</h3>
+            <h3 className="image-title-name">{name}</h3>
         </div>
     )
 }
