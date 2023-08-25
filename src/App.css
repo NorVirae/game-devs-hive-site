@@ -18,6 +18,7 @@ ul{
   height: 100vh;
   width: 100vw;
   padding: 3rem;
+  overflow: hidden!important;
 
 }
 
@@ -211,6 +212,7 @@ Count down */
 .modal-header span{
   font-size: 2rem;
   background-color: black;
+  padding: .3rem .3rem;
 }
 
 .modal-header:hover{

@@ -5,6 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 170%;
+  overflow: hidden!important;
+
 }
 
 /* code {
