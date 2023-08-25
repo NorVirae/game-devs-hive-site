@@ -1,38 +1,102 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+
 .App {
   text-align: center;
+  background-image: url(/public/images/buildbackground.webp);
+  background-position: 50% 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+  padding: 3rem;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.schedule-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.schedule-container h3{
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.schedule{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.seasons-link{
+  color: white;
+}
+
+/* 
+Count down */
+
+.demo-count-down{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  justify-content: flex-end;
+}
+
+.general-time-bar-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.days-span{
+  font-size: 6rem;
+}
+
+.demo-desc{
+  font-size: 1.5rem;
+}
+
+.demo-desc-timer{
+  font-size: 1.3rem;
+  display: flex;
+  gap: 1.3rem;
+}
+
+/* middle folder */
+.updates-container{
+  display: flex;
+  gap: 3rem;
+}
+
+/* folder object */
+.folder{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.folder-img-container{
+  width: 3rem;
+  height: 3rem;
+
+}
+
+.folder-img{
+  width: 100%;
+  height: 100%;
 }
