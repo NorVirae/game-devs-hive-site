@@ -42,7 +42,7 @@ const CountdownTimer = ({targetDate}) => {
                 </div>
             </div>
     
-            <div className='updates-container'>
+            <div style={{visibility:"hidden"}} className='updates-container'>
                 <Folder name={"Week 3"} type={"week"}/>
                 <Folder name={"gdh update"} type={"update"}/>
     

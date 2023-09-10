@@ -5,7 +5,7 @@ import { AppContext } from '../../utils/context/AppContext';
 
 
 export default function RevealModal(){
-    const [rightPosition, setRightPosition] = useState({rightPosition:0, x: 10, y: 10, backdrop: 5, playbtn: 0})
+    const [rightPosition, setRightPosition] = useState({rightPosition:0, x: 10, y: 10, backdrop: 5, playbtn: -30})
     const {setIsModalOpen} = useContext(AppContext);
 
     useEffect(() => {
@@ -21,6 +21,7 @@ export default function RevealModal(){
 
         gsap.to(".play-text", {
             x: rightPosition.playbtn+"%",
+            y: "180%",
             duration: 0.4
             });
       }, [rightPosition]);

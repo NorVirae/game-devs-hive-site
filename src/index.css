@@ -20,7 +20,12 @@ body {
     monospace;
 } */
 
-@import url('https://fonts.cdnfonts.com/css/airstrike');
+@font-face {
+  font-family: 'Airstrike Outline';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Airstrike Outline'), url('https://fonts.cdnfonts.com/s/12472/airstrikeout.woff') format('woff');
+}
 
 @import url("https://p.typekit.net/p.css?s=1&k=oov2wcw&ht=tk&f=39203&a=85994746&app=typekit&e=css");
 

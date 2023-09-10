@@ -5,10 +5,9 @@ import CountdownTimer from "../components/timer/CountdownTimer";
 import Folder from "../components/Folder";
 
 export default function Index(){
-        const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
     const NOW_IN_MS = new Date().getTime();
 
-    const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+    const dateTimeAfterThreeDays = new Date(2023, 11, 31).getTime() - Date.now() / 1000;
 
     const {isModalOpen} = useContext(AppContext);
     const {setIsModalOpen} = useContext(AppContext);
@@ -18,9 +17,9 @@ export default function Index(){
           <PopModal/>
         }
       <section className='schedule-container'>
-        <h3>schedule</h3>
+        <h3 style={{visibility:"hidden"}}>schedule</h3>
 
-        <ul className='schedule'>
+        <ul style={{visibility:"hidden"}} className='schedule'>
           <li className='schedule-item '>
             <span className='schedule-item-in achieved'>aug 24 - getting devs ready</span>
             <span className='schedule-item-silenced'>in archive</span>
@@ -38,13 +37,13 @@ export default function Index(){
           </li>
         </ul>
 
-        <a href='https://calendar.app.google/1MxNhzUkniZnM3788' className='seasons-link'>add season calender</a>
+        <a style={{visibility:"hidden"}} href='https://calendar.app.google/1MxNhzUkniZnM3788' className='seasons-link'>add season calender</a>
       </section>
 
       <CountdownTimer targetDate={dateTimeAfterThreeDays}/>
 
-      <section className='folders'>
-          <Folder onClick={() => {
+      <section style={{visibility:"hidden"}} className='folders'>
+          <Folder  onClick={() => {
             setIsModalOpen((old) => ({...old, main: true}))
           }} name={"recordings"} type={"record"}/>
           <Folder name={"archive"} type={"archive"}/>

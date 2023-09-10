@@ -1,9 +1,9 @@
 import MainPartnerCont from "./MainPartnerCont";
 import PartnershipInd from "./PartnershipInd";
 
-export default function Partnership(){
+export default function Partnership({id}){
     return (
-        <div className="partnership">
+        <div id={id} className="partnership">
             <MainPartnerCont />
             <PartnershipInd />
         </div>

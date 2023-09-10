@@ -268,7 +268,10 @@ Count down */
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.4rem;
+  position: sticky;
+  top: 0%;
+  z-index: 10;
 }
 
 .nav-brand{
@@ -356,7 +359,6 @@ Count down */
   object-position: 65% 90%;
   width: 100%;
   height: 100%;
-
 }
 
 
@@ -430,7 +432,15 @@ Count down */
   position: relative;
 
   gap: 1rem;
+  transition: all .6s ease-in-out;
 }
+
+/* .mission-ab-image-container:hover{
+  display: flex;
+  gap: .4rem;
+  transform: scale(1.2);
+ } */
+
 
 .mission-ab-image-cont{
   width: 50rem;
@@ -504,14 +514,25 @@ Count down */
   border: .15rem solid #58565E;
   padding: .7rem 2.5rem;
   background-color: transparent;
-
+  transition: all .8s ease-in-out;
  }
 
 
+ .learn-more-btn:hover{
+    color: #B933DA;
+    border: .15rem solid #B933DA;
+    cursor: pointer;
+ }
+
+ .learn-more-btn:active{
+  transform: scale(1.3);
+}
 
  .partnership-ind-container{
   display: flex;
   gap: .4rem;
+  transition: all .6s ease-in-out;
+  cursor: pointer;
  }
 
 
@@ -537,7 +558,12 @@ Count down */
   color: #58565E;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: all .6s ease-in-out;
 
+ }
+
+ .learn-more-linker:hover{
+  color: #B933DA;
  }
 
 
@@ -648,14 +674,19 @@ MOTHER MODAL
   z-index: 3;
 }
 
+
 .hive-container-header{
   font-family: 'Airstrike Outline', sans-serif;
+  font-weight: bold;
+
   font-size: 7rem;
   color: #876E8E;
   z-index: 3;
   line-height: 4rem;
 
 }
+
+
 
 .hive-container-desc{
   font-size: 1.5rem;
@@ -689,13 +720,14 @@ MOTHER MODAL
   align-items: center;
   flex-direction: row;
   gap: 2rem;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 .x-close{
   border-radius: 100%;
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   color: #AE7CFF;
   background-color: #efefef;
   display: flex;

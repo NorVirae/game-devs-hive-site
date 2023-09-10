@@ -11,18 +11,21 @@ export default function Navbar(){
             </a>
 
             <ul className="nav">
-                <li onClick={()=> {
-                    scroller.scrollTo("#home",
-                    {
-                        duration: 1500,
-                        delay: 100,
-                        smooth: true,
-                        containerId: 'about',
-                        offset: 50, // Scrolls to element + 50 pixels down the page
-                    } )
-                }} className="nav-item nav-active"><span className="nav-link">Home</span></li>
-                <li className="nav-item"><span className="nav-link">About</span></li>
-                <li className="nav-item"><span className="nav-link">Membership</span></li>
+                <Scroll.Link duration={500} smooth={true} offset={50} to = "home">
+                    <li className="nav-item nav-active"><span className="nav-link">Home</span>
+                    </li>
+                </Scroll.Link>
+
+                <Scroll.Link duration={500} smooth={true} offset={50} to = "about">
+                    <li className="nav-item "><span className="nav-link">About</span>
+                    </li>
+                </Scroll.Link>
+
+                <Scroll.Link duration={500} smooth={true} offset={50} to = "partner">
+                    <li className="nav-item "><span className="nav-link">Partnership</span>
+                    </li>
+                </Scroll.Link>
+                
                 <li className="nav-item btn-join">
                     <span className="nav-link">Join Community</span>
                 </li>
