@@ -62,7 +62,7 @@ export default function RevealModal(){
                 </section>
             </section>
 
-            <div className="back-drop">
+            <div className="back-drop"> 
                 <div className="backdrop-overlay"></div>
                 <div className="backdrop-image-container">
                     <img src="/images/main/close-two.png" alt="" className="backdrop-image"/>
