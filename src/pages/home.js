@@ -42,16 +42,16 @@ export default function Home(){
           }
         });
 
-        gsap.to(".navbar", {
-            backgroundColor: "black",
-            duration: 2,
-            ease: "bounce",
-            delay: 1,
-            scrollTrigger: {
-              trigger: ".mission-ab-image-container",
-              scrub: true,
-            }
-          });
+        // gsap.to(".navbar", {
+        //     backgroundColor: "black",
+        //     duration: 2,
+        //     ease: "bounce",
+        //     delay: 1,
+        //     scrollTrigger: {
+        //       trigger: ".mission-ab-image-container",
+        //       scrub: true,
+        //     }
+        //   });
       }, []);
 
     const onScroll = () => {

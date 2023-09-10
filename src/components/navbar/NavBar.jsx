@@ -7,7 +7,7 @@ export default function Navbar(){
     return (
         <section className="navbar">
             <a className="nav-brand" href="/">
-                <img src="/images/main/logo.png" className="nav-brand-img" alt="brand"/>
+                <img src="/images/main/Logo.png" className="nav-brand-img" alt="brand"/>
             </a>
 
             <ul className="nav">
