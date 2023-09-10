@@ -10,8 +10,9 @@ ul{
 
 .App {
   text-align: center;
-  background-image: url(/public/images/buildbackground.webp);
-  background-position: 50% 50%;
+  background-image: url(/public/images/background.png);
+  /* background-position: 50% 50%; */
+  background-size: contain;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: black;
@@ -67,8 +68,49 @@ Count down */
   display: flex;
   flex-direction: column;
   gap: 8rem;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  background-color: #1822a99f;
+  border-radius: 100%;
+  width: 40vw;
+  height: 40vw;
+  z-index: 15;
+  
+}
+
+.demo-count-down::before{
+  background-color: #1822A9;
+  content: " ";
+  width: 40vw;
+  height: 40vw;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 0;
+  animation: beep infinite 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+@keyframes beep {
+  0%{
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0;
+
+  }
+  50%{
+    transform: scale(1);
+    z-index: 0;
+    opacity: 0.2;
+
+  }
+
+  100%{
+    transform: scale(1.2);
+    opacity: 0;
+    z-index: 0;
+
+
+  }
 }
 
 .general-time-bar-container{
