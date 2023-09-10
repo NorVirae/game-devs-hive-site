@@ -1,15 +1,20 @@
+import { useContext } from "react";
 import AboutComp from "../components/AboutComp";
 import BannerHive from "../components/BannerHive";
 import Footer from "../components/Footer";
 import Mission from "../components/Mission";
 import Partnership from "../components/Partnership";
+import RevealModal from "../components/modals/RevealModal";
 import Navbar from "../components/navbar/NavBar";
+import { AppContext } from "../utils/context/AppContext";
+import Scroll, { Element } from 'react-scroll'
 
 
 export default function Home(){
+    const {isModalOpen} = useContext(AppContext);
     return (
-        <div className="home">
-            <RevealModal />
+        <div name="home" className="home">
+            {isModalOpen.mother && <RevealModal />}
             <header className="header">
                 <div className="header-overlay"></div>
                 <section className="header-inner">
@@ -22,9 +27,12 @@ export default function Home(){
             <main className="main">
                 <div className="main-inner">
 
-                    <section className="mission-ab-container">
+                    <section id="about" name="about" className="mission-ab-container">
                         <div className="mission-ab-container-inner">
-                            <AboutComp/>
+                            <Element name="about">
+
+                                <AboutComp/>
+                            </Element>
                             <Mission/>
                         </div>
                         <div className="mission-ab-image-container">

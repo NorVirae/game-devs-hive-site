@@ -272,8 +272,8 @@ Count down */
 }
 
 .nav-brand{
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 .nav-brand-img{
@@ -294,34 +294,34 @@ Count down */
 .nav-item{
 }
 
-.nav-item a{
+.nav-item span{
   color: #504C54;
   cursor: pointer!important;
 
 }
 
-.nav-item a{
+.nav-item span{
   cursor: pointer;
   text-decoration: none;
   transition: all .4s ease-in-out;
 }
 
-.nav-item a:hover{
+.nav-item span:hover{
   color: white;
 
 }
 
-.nav-item.nav-active a{
+.nav-item.nav-active span{
   color: white;
 }
 
-.btn-join a{
+.btn-join span{
   border: .1rem solid #4C4A52;
   color: #C25DE4;
   padding: .5rem 2rem;
 }
 
-.btn-join a:hover{
+.btn-join span:hover{
   border: .1rem solid #4C4A52;
   color: white;
   background-color: #C25DE4;
@@ -604,4 +604,139 @@ Count down */
   color: #58565E;
 
 
+}
+
+
+/* 
+
+MOTHER MODAL
+*/
+
+.mother-modal{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 5;
+}
+
+.reveal-modal{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 4rem;
+  background: url(/public/images/main/Close-one.png);
+  background-repeat: no-repeat;
+  transition: all .4s ease-in-out;
+  background-size: cover;
+  z-index: 3;
+}
+
+.hive-container-header-img-cont{
+  background-color: red;
+}
+
+.hive-container{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 1rem;
+  position: relative;
+  align-items: flex-end;
+  flex: 3;
+  position: relative;
+  left: -10%;
+  z-index: 3;
+}
+
+.hive-container-header{
+  font-family: 'Airstrike Outline', sans-serif;
+  font-size: 7rem;
+  color: #876E8E;
+  z-index: 3;
+  line-height: 4rem;
+
+}
+
+.hive-container-desc{
+  font-size: 1.5rem;
+  z-index: 3;
+  color: #939197;
+
+}
+
+.hive-container-image{
+  position: absolute;
+  object-fit: cover;
+  width: 80%;
+  left: -12%;
+  top: 5%;
+}
+
+
+.play-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  z-index: 3;
+  color: #d2d4d6;
+
+}
+
+.play-text{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  font-size: 2.5rem;
+}
+
+.x-close{
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  color: #AE7CFF;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s ease-in-out;
+  cursor: pointer;
+}
+
+.x-close:active{
+  transform: scale(1.4);
+
+}
+
+.back-drop{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+
+.backdrop-overlay{
+  /* background-color: black; */
+  /* background-image: linear-gradient(to top, #38424fd5, transparent); */
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
+.backdrop-image-container{
+  position: relative;
+  height: 100%;
+}
+
+.backdrop-image{
+  position: absolute;
+  width: 90%;
+  right: 0%;
+  bottom: 0%;
 }

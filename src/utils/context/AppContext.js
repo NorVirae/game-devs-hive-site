@@ -12,7 +12,7 @@ export const AppContext = createContext(false);
 //   };
 
 export const AppProvider = ({children}) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState({mother: true, main: false});
     return (
       <AppContext.Provider value={{isModalOpen, setIsModalOpen}}>
         {children}

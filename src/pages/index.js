@@ -14,7 +14,7 @@ export default function Index(){
     const {setIsModalOpen} = useContext(AppContext);
     return (
         <div className="App">
-      {isModalOpen && 
+      {isModalOpen.main && 
           <PopModal/>
         }
       <section className='schedule-container'>
@@ -45,7 +45,7 @@ export default function Index(){
 
       <section className='folders'>
           <Folder onClick={() => {
-            setIsModalOpen(true)
+            setIsModalOpen((old) => ({...old, main: true}))
           }} name={"recordings"} type={"record"}/>
           <Folder name={"archive"} type={"archive"}/>
       </section>
