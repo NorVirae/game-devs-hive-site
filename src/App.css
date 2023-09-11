@@ -79,10 +79,7 @@ Count down */
   align-items: center;
   /* background-color: #1822a99f; */
   border-radius: 100%;
-  width: 40vw;
-  height: 40vw;
   z-index: 15;
-  
 }
 
 /* .demo-count-down::before{
@@ -133,19 +130,29 @@ Count down */
   align-items: flex-end;
 }
 .days-span{
-  font-size: 6rem;
+  font-size: 7rem;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  line-height: 5rem;
+  line-height: 6.5rem;
   padding: 0;
 }
 
 .days-span-mini{
   font-size: 3rem;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(4, 1fr);
   color: #00CCFF;
+}
+
+.days-span-mini span{
+  
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
 }
 .demo-desc{
   font-size: 1.5rem;
@@ -1045,4 +1052,22 @@ patterns*/
       align-items: center;
       justify-content: center;
     }
+
+    .App {
+      text-align: center;
+      background-image: url(/public/images/background.png);
+      /* background-position: 50% 50%; */
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      grid-template-columns: repeat(3, 1fr);
+      background-color: black;
+      height: 100vh;
+      width: 100vw;
+      padding: 3rem;
+      overflow: hidden!important;    
+    }
+    
   }

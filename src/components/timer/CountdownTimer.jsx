@@ -25,14 +25,15 @@ const CountdownTimer = ({targetDate}) => {
                 <div className='general-time-bar-container'>
                     <div className='days-countdown'>
                         <span className='days-span'>
-                            {days}
-                        </span>.
-                        <span className="days-span-mini">
-                            <span>{hours}</span>
+                                {days}
+                        </span>
+                        <div className="days-span-mini">
+                            
+                            <span>.{hours}</span>
                             <span>{minutes< 10? "0"+minutes: minutes}</span>
                             <span>{seconds< 10? "0"+seconds: seconds}</span>
                             <span>{milliSeconds< 10 ?"0"+milliSeconds.toString().slice(0,2):milliSeconds.toString().slice(0,2)}</span>
-                        </span>
+                        </div>
                     </div>
                     <div className='demo-desc'>
                         days till demo day
