@@ -2,11 +2,14 @@ import {LiaTimesSolid} from 'react-icons/lia';
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { AppContext } from '../../utils/context/AppContext';
+import { useMediaQuery } from 'react-responsive';
 
 
 export default function RevealModal(){
     const [rightPosition, setRightPosition] = useState({rightPosition:0, x: 10, y: 10, backdrop: 5, playbtn: -30})
     const {setIsModalOpen} = useContext(AppContext);
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 1224 })
+
 
     useEffect(() => {
           gsap.to(".hive-container", {
@@ -20,7 +23,7 @@ export default function RevealModal(){
             });
 
         gsap.to(".play-text", {
-            x: rightPosition.playbtn+"%",
+            x: isTabletOrMobile ? "-70%": rightPosition.playbtn+"%",
             y: "180%",
             duration: 0.4
             });

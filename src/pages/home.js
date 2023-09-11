@@ -9,6 +9,7 @@ import Navbar from "../components/navbar/NavBar";
 import { AppContext } from "../utils/context/AppContext";
 import Scroll, { Element } from 'react-scroll'
 import { gsap } from "gsap";
+import Carousel from "../components/Carousel";
 
 
 export default function Home(){
@@ -60,25 +61,30 @@ export default function Home(){
     }
     return (
         <div onScroll={onScroll} ref={homeRef} id="home" className="home">
+            <div className="patterne-image-container"><img className="patterne-image" src="/images/main/Small-circles.png" alt=""/></div>
 
-            {isModalOpen.mother && <RevealModal />}
-            <header className="header">
+            {/* {isModalOpen.mother && <RevealModal />} */}
+            <Navbar />
+
+            {/* <header className="header">
+
                 <div className="header-overlay"></div>
                 <section className="header-inner">
-                    <Navbar />
 
                     <BannerHive/>
 
+                    
                 </section>
-            </header>
+            </header> */}
+            <Carousel/>
             <main className="main">
                 <div className="main-inner">
 
                     <section id="about"  className="mission-ab-container">
                         <div className="mission-ab-container-inner">
-                            {/* <Element name="about"> */}
+                            {/* <Element name="about"> */} 
 
-                                <AboutComp/>
+                            <AboutComp/>
                             {/* </Element> */}
                             <Mission/>
                         </div>
@@ -97,9 +103,9 @@ export default function Home(){
                     </section>
 
                     <Partnership id="partner"/>
+                    
 
                 </div>
-                
             </main>
 
             <footer className="footer">

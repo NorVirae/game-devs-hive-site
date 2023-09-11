@@ -8,6 +8,12 @@ ul{
   list-style-type: none;
 }
 
+.home{
+  position: relative;
+}
+
+
+
 .App {
   text-align: center;
   background-image: url(/public/images/background.png);
@@ -271,29 +277,57 @@ Count down */
 
 */
 .header{
-  background-image: url(/public/images/main/header-background.jpg);
   background-position: 50% 40%;
   height: 100vh;
+  background-image: url(/public/images/main/header-background.jpg);
+  background-size: cover;
   
+}
+
+.header-jam{
+  background-position: 50% 40%;
+  height: 100vh;
+  background-image: url(/public/images/main/game-jam.jpg);
+  background-size: cover;
   
+}
+
+.learn-more-btn.purple{
+  color: #C25DE4;
+  border: .1rem solid ;
+}
+
+.learn-more-btn.purple:hover{
+  color: #504C54;
+
+  border: .1rem solid ;
+}
+
+.jam-btn-container{
+  display: flex;
+  gap: 3rem;
 }
 
 .header-inner{
   z-index: 1;
   display: flex;
   flex-direction: column;
+
   padding: 1rem;
   height: 100%;
   color: white;
   position: relative;
-  max-width: 80rem;
+  max-width: 90vw;
   margin: 0 auto;
+  
 }
 
-
+.carousel-container{
+  width: 100%;
+}
 .header-overlay{
   /* background-color: black; */
-  background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.795));
+  background-image: linear-gradient(to top, #04010f, #04010fce, #04010fbb);
   /* opacity: 0.8; */
   position: absolute;
   top: 0%;
@@ -305,13 +339,20 @@ Count down */
 }
 
 .navbar {
+  
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.navbar-inner{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
   padding: 1.5rem 1.4rem;
-  z-index: 10;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 .nav-brand{
@@ -335,33 +376,50 @@ Count down */
 }
 
 .nav-item{
+  padding: .2rem 1rem;
+  
 }
 
 .nav-item span{
   color: #504C54;
   cursor: pointer!important;
-
 }
 
 .nav-item span{
   cursor: pointer;
   text-decoration: none;
   transition: all .4s ease-in-out;
+  
 }
 
 .nav-item span:hover{
   color: white;
+  transform: skewX(40deg);
+
+}
+
+.nav-item.nav-active{
+  border-bottom: .2rem #C25DE4 solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: skewX(-40deg);
 
 }
 
 .nav-item.nav-active span{
   color: white;
+  display: flex;
+  padding-right: 50%;
+  transform: skewX(40deg);
+
 }
 
 .btn-join span{
   border: .1rem solid #4C4A52;
   color: #C25DE4;
   padding: .5rem 2rem;
+  transition: all .3s ease-in-out;
 }
 
 .btn-join span:hover{
@@ -369,6 +427,10 @@ Count down */
   color: white;
   background-color: #C25DE4;
   padding: .5rem 2rem;
+}
+
+.btn-join span:active{
+  transform: scale(1.1);
 }
 
 /* Banner Hive */
@@ -388,6 +450,7 @@ Count down */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .shout-out-image-container{
@@ -427,13 +490,15 @@ Count down */
 .main{
   height: 100%;
   color: white;
-  background-color: #03010C;
+  background-image: url(/public//images/main/About-background-pattern.png);
+  background-size: cover;
 }
 
 .main-inner{
-  max-width: 80rem;
+  max-width: 90vw;
   margin: 0 auto;
   padding: 3rem 4rem ;
+
 }
 
 .mission-ab-container{
@@ -442,6 +507,7 @@ Count down */
   height: 100vh;
   justify-content: center;
   align-items: center;
+  
 }
 
 .mission-ab-container-inner{
@@ -599,6 +665,7 @@ Count down */
   text-decoration: none;
   font-size: 1.2rem;
   transition: all .6s ease-in-out;
+  visibility: hidden;
 
  }
 
@@ -622,7 +689,7 @@ Count down */
 }
 
 .footer-inner{
-  max-width: 80rem;
+  max-width: 90vw;
   margin: 0 auto;
   padding: 3rem 4rem ;
 }
@@ -631,6 +698,8 @@ Count down */
 .footer-main{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+
   gap: 3rem;
 }
 
@@ -656,16 +725,24 @@ Count down */
 
 .footer-pages{
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .footer-pages-item{
-  color: white;
+  color: #6D6C74;
   font-size: .9rem;
+  cursor: pointer;
 
 }
 
+.footer-pages-item:hover{
+  color: #cecdd3; 
+
+}
+
+.footer-pages-item:active{
+  transform: scale(1.1);
+}
 .footer-pages-item.head{
   color: #58565E;
 
@@ -695,10 +772,10 @@ MOTHER MODAL
   transition: all .4s ease-in-out;
   background-size: cover;
   z-index: 3;
+  background-color: black;
 }
 
 .hive-container-header-img-cont{
-  background-color: red;
 }
 
 .hive-container{
@@ -812,3 +889,158 @@ MOTHER MODAL
   right: 0%;
   bottom: 0%;
 }
+
+/* 
+
+patterns*/
+
+.patterne-image-container{
+  position: absolute;
+  left: -20%;
+  top: -10%;
+  width: 30vw;
+  height: 30vw;
+  z-index: 1;
+}
+.patterne-image{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 3 */
+
+.patterne-image-container-3{
+  position: absolute;
+  right: 40%; /* Adjust as needed */
+  top: 0%;
+  width: 30vw;
+  height: 30vw;
+  z-index: 1;
+  transform: translateX(180%) translateY(100%); /* Move it off-screen to the right */
+}
+.patterne-image-3{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* MOBILE */
+
+
+@media only screen and (max-width: 600px) {
+    .mission-ab-container{
+      flex-direction: column;
+      height: 100%;
+      gap: 4rem;
+      
+    }
+
+    .shout-out-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+    .shout-out-container span{
+      font-size: .7rem;
+      color: #9D9D9E;
+      text-align: center;
+
+    }
+
+    .shout-out-ex{
+      font-size: .7rem;
+      width: 100%;
+    }
+
+    .partnership{
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+      height: auto;
+     }
+
+     .header-inner{
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    
+      padding: 1rem;
+      height: 100%;
+      color: white;
+      position: relative;
+      max-width: 100%;
+      
+    }
+
+    .footer-main{
+      flex-direction: column;
+    
+      gap: 3rem;
+    }
+
+    .partnership-ind-container{
+      flex-direction: column;
+     }
+
+     .main-inner{
+      max-width: 100%;
+      padding: 3rem 2rem ;
+    
+    }
+
+    .main-partnership{
+      align-items: center;
+     }
+     .main-partnership-content{
+      color: #58565E;
+      width: 100%;
+      text-align: center;
+    
+     }
+
+     .mission-ab-image-container{
+      width: 100%;
+    
+    }
+
+
+    .shout-out-image-container{
+      width: 100%;
+    }
+
+    .about-comp-desc{
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    .mission-desc{
+      text-align: center;
+      font-size: .9rem;
+
+    }
+
+    .mission{
+      align-items: center;
+     }
+
+     .about-comp{
+      align-items: center;
+     }
+    
+     .footer-inner{
+      max-width: 100%;
+      padding: 3rem 2rem ;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-main{
+      align-items: center;
+      justify-content: center;
+    }
+  }
